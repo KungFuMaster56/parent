@@ -311,11 +311,11 @@
 	<modules>
 		<module>pasom.app.api</module>
 		<module>pasom.app.jpa</module>
-		<module>pasom.app.service</module>
+		<module>pasom.app.svc</module>
 		<module>pasom.app.web</module>
 		<module>pasom.data.api</module>
 		<module>pasom.data.jpa</module>
-		<module>pasom.data.service</module>
+		<module>pasom.data.svc</module>
 		<module>pasom.data.web</module>
 	</modules>
 </project>

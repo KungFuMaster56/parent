@@ -28,13 +28,19 @@
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.3.9.Final</hibernate.version>
+		<spring-data-jpa.version>1.8.0.RELEASE</spring-data-jpa.version>
 
+		<!-- database driver -->
+		<microsoft-sqlserver-driver.version>4.0</microsoft-sqlserver-driver.version>
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
+		
+		<!-- apache camel -->
+		<apache-camel.version>2.15.2</apache-camel.version>
 
 	</properties>
 	<dependencyManagement>
@@ -158,6 +164,12 @@
 				<groupId>org.springframework</groupId> <artifactId>spring-test</artifactId> 
 				<version>${spring-framework.version}</version> <scope>test</scope> </dependency> -->
 
+			<!-- spring data jpa -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring-data-jpa.version}</version>
+			</dependency>
 			<!-- Other Web dependencies -->
 			<dependency>
 				<groupId>javax.servlet</groupId>
@@ -176,7 +188,7 @@
 				<version>${jsp.version}</version>
 				<scope>provided</scope>
 			</dependency>
-			
+
 			<!-- Logging with SLF4J & LogBack -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -252,7 +264,33 @@
 				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
-
+			<!-- database driver -->
+			<dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>sqljdbc4</artifactId>
+				<version>${microsoft-sqlserver-driver.version}</version>
+			</dependency>
+			<!-- apache Camel -->
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-core</artifactId>
+				<version>${apache-camel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-rmi</artifactId>
+				<version>${apache-camel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>${apache-camel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-test</artifactId>
+				<version>${apache-camel.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

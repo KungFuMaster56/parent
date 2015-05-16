@@ -1,13 +1,23 @@
 package org.pasom.app.svc;
 
+import java.rmi.RemoteException;
+
+import javax.annotation.Resource;
+
+import org.pasom.data.api.StationDataProcessor;
+import org.springframework.stereotype.Service;
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+@Service
+public class App {
+	@Resource
+	private StationDataProcessor dataProcessor;
+
+	public void test() throws RemoteException {
+		dataProcessor.processData();
+	}
+
 }

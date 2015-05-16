@@ -18,6 +18,17 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- pasom -->
+		<dependency>
+			<groupId>com.htdf.dl</groupId>
+			<artifactId>pasom.data.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.htdf.dl</groupId>
+			<artifactId>pasom.data.svc</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>pasom.app.web</finalName>

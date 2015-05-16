@@ -1,38 +1,28 @@
 package org.pasom.app.svc;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.rmi.RemoteException;
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+		"classpath*:META-INF/pasom.data.svc.application.xml",
+		"classpath:META-INF/pasom.app.svc.application.xml",
+		"classpath:META-INF/pasom.camel.xml" })
+public class AppTest {
+	@Resource
+	private App app;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void testRemote() throws RemoteException {
+		app.test();
+	}
 }

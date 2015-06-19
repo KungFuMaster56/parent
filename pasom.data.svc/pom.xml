@@ -59,5 +59,10 @@
 			<artifactId>pasom.data.api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.htdf.dl</groupId>
+			<artifactId>pasomdata</artifactId>
+			<version>2.0</version>
+		</dependency>
 	</dependencies>
 </project>

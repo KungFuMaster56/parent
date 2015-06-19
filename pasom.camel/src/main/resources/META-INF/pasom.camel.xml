@@ -6,12 +6,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring-2.11.0.xsd">
-	<camel:camelContext xmlns="http://camel.apache.org/schema/spring"
+	<context:component-scan base-package="org.pasom.camel"></context:component-scan>
+	<!-- <camel:camelContext xmlns="http://camel.apache.org/schema/spring"
 		id="camelContext">
 		<camel:route id="out">
 			<camel:from uri="bean:dataProcessor"></camel:from>
 			<camel:to
 				uri="rmi://${pasom.data.rmi.host}:${pasom.data.rmi.port}/StationDataProcessor"></camel:to>
 		</camel:route>
-	</camel:camelContext>
+	</camel:camelContext> -->
 </beans>

@@ -22,7 +22,8 @@
 	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
 		<property name="serviceName" value="StationDataProcessor"></property>
 		<property name="service" ref="stationDataProcessorImpl"></property>
-		<property name="serviceInterface" value="org.pasom.data.api.StationDataProcessor"></property>
+		<property name="serviceInterface"
+			value="org.pasom.data.api.StationDataProcessorWapper"></property>
 		<property name="registry" ref="pasomDataSvcRegistry"></property>
 	</bean>
 </beans>

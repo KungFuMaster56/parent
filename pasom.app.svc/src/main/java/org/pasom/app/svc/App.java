@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 
 import javax.annotation.Resource;
 
-import org.pasom.data.api.StationDataProcessor;
+import org.pasom.data.api.StationDataProcessorWapper;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class App {
 	@Resource
-	private StationDataProcessor dataProcessor;
+	private StationDataProcessorWapper dataProcessor;
 
 	public void test() throws RemoteException {
 		dataProcessor.processData();

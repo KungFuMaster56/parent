@@ -295,6 +295,11 @@
 				<artifactId>camel-test</artifactId>
 				<version>${apache-camel.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-ftp</artifactId>
+				<version>${apache-camel.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

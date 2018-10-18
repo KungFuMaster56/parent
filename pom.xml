@@ -40,7 +40,7 @@
 		<junit.version>4.11</junit.version>
 
 		<!-- apache camel -->
-		<apache-camel.version>2.12.1</apache-camel.version>
+		<apache-camel.version>[2.17.6,)</apache-camel.version>
 
 	</properties>
 	<dependencyManagement>
